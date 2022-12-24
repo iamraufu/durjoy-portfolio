@@ -1,3 +1,21 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+.nav-link:hover {
+    background-color: #a06474;
+    color: #fff !important;
+}
+
+.project-image:hover {
+    transition: 0.7s;
+    transform: scale(1.1);
+}
+
+.project {
+    background-color: #f4f2ec;
+}
+
+p {
+    text-align: justify;
+}
