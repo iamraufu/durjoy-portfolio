@@ -3,7 +3,7 @@ import A3 from '../images/projects/3A.png';
 import A6 from '../images/projects/6A.png';
 import B6 from '../images/projects/6B.png';
 import C6 from '../images/projects/6C.png';
-import D6 from '../images/projects/6D.png';
+// import D6 from '../images/projects/6D.png';
 import A8 from '../images/projects/8A.png';
 import B8 from '../images/projects/8B.png';
 import C8 from '../images/projects/8C.png';
@@ -21,7 +21,7 @@ import A14 from '../images/projects/14A.png';
 import B14 from '../images/projects/14B.png';
 import C14 from '../images/projects/14C.png';
 import D14 from '../images/projects/14D.png';
-// import A15 from '../images/projects/15A.png';
+import A15 from '../images/projects/15A.png';
 import B15 from '../images/projects/15B.png';
 
 const highlightedProjects = [
@@ -55,12 +55,12 @@ const highlightedProjects = [
         name: "Project 6: MSJ 11214 Convergence Communication 1",
         project: "Convergence Communication 1"
     },
-    {
-        id: 6,
-        image: D6,
-        name: "Project 6: MSJ 11214 Convergence Communication 1",
-        project: "Convergence Communication 1"
-    },
+    // {
+    //     id: 6,
+    //     image: D6,
+    //     name: "Project 6: MSJ 11214 Convergence Communication 1",
+    //     project: "Convergence Communication 1"
+    // },
     {
         id: 8,
         image: A8,
@@ -163,12 +163,12 @@ const highlightedProjects = [
         name: "Project 14: MSJ11336 TV Infotainment Production",
         project: "মধ্যরাতের সমাচার Episode ৯/৬"
     },
-    // {
-    //     id: 15,
-    //     image: A15,
-    //     name: "Project 15: MSJ11336 TV Infotainment Production",
-    //     project: "Documentary on DSA act"
-    // },
+    {
+        id: 15,
+        image: A15,
+        name: "Project 15: MSJ11336 TV Infotainment Production",
+        project: "Documentary on DSA act"
+    },
     {
         id: 15,
         image: B15,
