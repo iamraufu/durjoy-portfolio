@@ -1,4 +1,6 @@
 import React from 'react';
+import dp from '../images/dp.jpg'
+import resume from '../files/Resume of Shafayet.pdf'
 
 const Hero = () => {
     return (
@@ -6,7 +8,7 @@ const Hero = () => {
             <div className='container'>
                 <div style={{ backgroundColor: '#f8f4ec', boxShadow: '0 8px 16px #0a0a0a1a' }} className="row">
                     <div className="col-md-8">
-                        <div style={{ minHeight: '150px' }} className="d-flex justify-content-center align-items-center">
+                        <div style={{ minHeight: '100px' }} className="d-flex justify-content-center align-items-center">
                             <h1 className='text-center fs-3 text-uppercase'>Welcome to <span className='text-danger fw-bold'>Shafayet Muttaky Durjoy</span>'s Profile</h1>
                         </div>
                         <p style={{ textAlign: 'justify' }} className='p-2'>I am able to analyze critically, express myself articulately, take photographs, and create films. I thrive in professional settings and can keep cool under intense time constraints. I like learning about new things and challenging myself. To further my career, I am committed to expanding my expertise in my field of choice. Along the way, I often pick up new information and abilities.
@@ -14,7 +16,9 @@ const Hero = () => {
                             I am an undergraduate student in the Media Studies and Journalism department. At the University of Liberal Arts Bangladesh, I majored in DP (Digital Tv and Film Production) under a Bachelor of Social Science.</p>
                         <div className="d-flex justify-content-between">
                             <div className="">
-                                <button className='btn btn-sm btn-primary m-2'>Download CV</button>
+                                <a href={resume} download='Resume of Shafayet'>
+                                    <button className='btn btn-sm btn-primary m-2'>Download CV</button>
+                                </a>
                             </div>
                             
                             <div className="mt-2">
@@ -27,7 +31,7 @@ const Hero = () => {
                     </div>
 
                     <div style={{ padding: '0' }} className="col-md-4">
-                        <img className='img-fluid ms-auto d-block' width={350} src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Shafayet Muttaky Durjoy" />
+                        <img className='img-fluid ms-auto d-block' width={400} src={dp} alt="Shafayet Muttaky Durjoy" />
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import highlightedProjects from '../data/highlightedProjects';
 
 const HighlightedProject = () => {
     return (
@@ -7,24 +9,15 @@ const HighlightedProject = () => {
                 <h2 style={{ lineHeight: '40px', letterSpacing: '16px' }} className='text-center pt-5 fw-bold text-uppercase'>Highlighted Projects</h2>
 
                 <div className="row py-5 justify-content-center align-items-center">
-                    <div className="col-md-2"></div>
-                    <div className="col-md-2">
-                        <img width={180} src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" className='img-fluid rounded project-image' alt="" />
-                        <h3 className='fs-6 mt-2 text-danger fw-bold'>Project Name</h3>
-                    </div>
-                    <div className="col-md-2">
-                        <img width={180} src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" className='img-fluid rounded project-image' alt="" />
-                        <h3 className='fs-6 mt-2 text-danger fw-bold'>Project Name</h3>
-                    </div>
-                    <div className="col-md-2">
-                        <img width={180} src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" className='img-fluid rounded project-image' alt="" />
-                        <h3 className='fs-6 mt-2 text-danger fw-bold'>Project Name</h3>
-                    </div>
-                    <div className="col-md-2">
-                        <img width={180} src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" className='img-fluid rounded project-image' alt="" />
-                        <h3 className='fs-6 mt-2 text-danger fw-bold'>Project Name</h3>
-                    </div>
-                    <div className="col-md-2"></div>
+                    {
+                        highlightedProjects.map((project,index) =>
+                            <div key={index+1} className="my-2 col-lg-3 col-md-4 col-sm-6">
+                                <Link onClick={()=> window.scrollTo(0, 0)} to={`/project/${project.id}`} className='text-decoration-none'>
+                                    <img style={{ height: '300px', cursor: 'pointer' }} className='img-fluid rounded project-image' src={project.image} alt="" />
+                                    <h3 style={{ fontSize: '14px' }} className='mt-3 text-danger fw-bold'>{project.name}</h3>
+                                </Link>
+                            </div>
+                        )}
                 </div>
             </div>
         </div>

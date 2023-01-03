@@ -5,7 +5,7 @@ import IntroductionModal from '../components/IntroductionModal';
 import Navbar from '../components/Navbar';
 import ObjectivesModal from '../components/ObjectivesModal';
 import SelfReflectionModal from '../components/SelfReflectionModal';
-import projectsData from '../data/projects.json'
+import projectsData from '../data/projects.js'
 
 const UndergraduatePortfolio = () => {
     return (
@@ -30,9 +30,9 @@ const UndergraduatePortfolio = () => {
                     <div className="row py-5 justify-content-center align-items-center">
                         {
                             projectsData.map(project =>
-                                <div style={{ minHeight: '280px' }} className="col-lg-3 col-md-4 col-sm-6">
-                                    <Link to={`/project-${project.id}`} className='text-decoration-none'>
-                                        <img className='img-fluid project-image rounded' src={project.image} alt="project" />
+                                <div key={project.id} style={{ minHeight: '280px' }} className="col-lg-3 col-md-4 col-sm-6">
+                                    <Link onClick={()=> window.scrollTo(0, 0)} to={`/project/${project.id}`} className='text-decoration-none'>
+                                        <img style={{ height: '200px' }} className='img-fluid project-image rounded' src={project.image} alt="project" />
                                         <h3 style={{ fontSize: '14px' }} className='my-3 px-1 text-danger fw-bold'>{project.name}</h3>
                                     </Link>
                                 </div>
